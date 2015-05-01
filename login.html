@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Login Required</title>
+			<script>
+				console.log("Chart.io Dashboard ID:", {{ dashboardID }});
+				console.log("Current User: {{ email }}");
+			</script>
+	</head>
+	<body>
+			<h1>Are you Sure You're Supposed to be Here?</h1>
+			<p>
+				You'll need to be an Optimizely employee and logged in with your @optimizely.com account to view this dashboard.
+				<br />You can log in with your Optimizely Account <a href="{{ url|safe }}">here</a>.
+			</p>
+	</body>
+</html>
+{% endautoescape %}
